@@ -3,6 +3,7 @@ import SearchBar from './components/SearchBar';
 import CategoryButtons from './components/CategoryButtons';
 import PhotoGrid from './components/PhotoGrid';
 import LoadingSpinner from './components/LoadingSpinner';
+import Footer from './components/Footer';
 
 export default function App() {
   const [photos, setPhotos] = useState([]);
@@ -47,7 +48,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white flex flex-col items-center">
       <header className="text-center py-8">
-        <h1 className="text-5xl font-extrabold tracking-tight"> SnapShot</h1>
+        <h1 className="text-5xl font-extrabold tracking-tight"> Snap Shot</h1>
       </header>
       <main className="w-full max-w-7xl px-4">
         <SearchBar onSearch={handleSearch} />
@@ -55,6 +56,7 @@ export default function App() {
         <h2 className="text-3xl font-semibold text-center mb-6">{title}</h2>
         {loading ? <LoadingSpinner /> : <PhotoGrid photos={photos} />}
       </main>
+      <Footer />
     </div>
   );
 }
