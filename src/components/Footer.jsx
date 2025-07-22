@@ -11,18 +11,3 @@ function Footer() {
 }
 
 export default Footer;
-
-
-function App() {
-  const my_secret = "Api_key"
-  return (
-   
-      <div >
-        <h1>Variable de entorno: </h1>
-        <p>{my_secret}</p>
-      </div>
-    
-  );
-}
-
-export default Footer;
